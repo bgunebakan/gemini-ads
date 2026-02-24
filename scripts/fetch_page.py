@@ -14,12 +14,14 @@ from urllib.parse import urlparse
 try:
     import requests
 except ImportError:
-    print("Error: requests library required. Install with: pip install -r requirements.txt")
+    print(
+        "Error: requests library required. Install with: pip install -r requirements.txt"
+    )
     sys.exit(1)
 
 
 DEFAULT_HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; GeminiAds/1.1; +https://github.com/AgriciDaniel/claude-ads)",
+    "User-Agent": "Mozilla/5.0 (compatible; GeminiAds/1.1; +https://github.com/bgunebakan/gemini-ads)",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.5",
     "Accept-Encoding": "gzip, deflate",
@@ -91,11 +93,17 @@ def fetch_page(
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Fetch a landing page for ad quality analysis")
+    parser = argparse.ArgumentParser(
+        description="Fetch a landing page for ad quality analysis"
+    )
     parser.add_argument("url", help="URL to fetch")
     parser.add_argument("--output", "-o", help="Output file path")
-    parser.add_argument("--timeout", "-t", type=int, default=30, help="Timeout in seconds")
-    parser.add_argument("--no-redirects", action="store_true", help="Don't follow redirects")
+    parser.add_argument(
+        "--timeout", "-t", type=int, default=30, help="Timeout in seconds"
+    )
+    parser.add_argument(
+        "--no-redirects", action="store_true", help="Don't follow redirects"
+    )
 
     args = parser.parse_args()
 

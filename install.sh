@@ -13,7 +13,7 @@ main() {
     # Use current directory as source if running locally, otherwise temp
     SRC_DIR="."
     if [ ! -f "gemini-ads/TASKS.md" ] && [ ! -f "TASKS.md" ]; then
-        REPO_URL="https://github.com/AgriciDaniel/claude-ads"
+        REPO_URL="https://github.com/bgunebakan/gemini-ads"
         TEMP_DIR=$(mktemp -d)
         trap "rm -rf ${TEMP_DIR}" EXIT
         echo "↓ Downloading Gemini Ads..."

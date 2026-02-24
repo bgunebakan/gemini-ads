@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/banner.png" alt="Gemini Ads" width="100%">
-</p>
-
 # Gemini Ads
 
 Comprehensive paid advertising audit and optimization skill for Gemini CLI. Covers Google Ads, Meta Ads, YouTube Ads, LinkedIn Ads, TikTok Ads, and Microsoft Ads with 190 audit checks, industry-specific templates, and parallel subagent delegation.
